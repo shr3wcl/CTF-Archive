@@ -37,3 +37,5 @@ LETMEWIN
 good job :)
 mommy! I think I know what a file descriptor is!!
 ```
+
+Flag is: ___mommy! I think I know what a file descriptor is!!___

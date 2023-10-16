@@ -72,3 +72,5 @@ Run payload on server:
 col@pwnable:~$ ./col "$(python2 -c "print '\xc8\xce\xc5\x06' * 4 + '\xcc\xce\xc5\x06'")"
 daddy! I just managed to create a hash collision :)
 ```
+
+Flag is: ___daddy! I just managed to create a hash collision :\)___

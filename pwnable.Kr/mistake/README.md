@@ -64,3 +64,37 @@ int main(int argc, char* argv[]){
 ```
 
 # 🚩 Solve
+
+Recreate the above code with the xor function and enter an input to find out the remaining input 2
+
+```c
+#include<stdio.h>
+
+void xor (char *s, int len) {
+    int i;
+    for (i = 0; i < len; i++)
+    {
+        s[i] ^= 1;
+    }
+}
+
+int main(){
+    char a[10] = "AAAAAAAAAA";
+    xor(a, 10);
+    puts(a);
+}
+```
+Input 1: AAAAAAAAAA 
+Input 2: @@@@@@@@@@
+
+```bash
+mistake@pwnable:~$ ./mistake
+do not bruteforce...
+AAAAAAAAAA
+@@@@@@@@@@
+input password : Password OK
+Mommy, the operator priority always confuses me :(
+mistake@pwnable:~$
+```
+
+So, flag is: ___Mommy, the operator priority always confuses me :\(___

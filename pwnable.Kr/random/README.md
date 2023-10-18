@@ -46,4 +46,4 @@ Mommy, I thought libc random is unpredictable...
 random@pwnable:~$
 ```
 
-Flag: ___Mommy, I thought libc random is unpredictable...___
+## `🚩Flag: Mommy, I thought libc random is unpredictable...`

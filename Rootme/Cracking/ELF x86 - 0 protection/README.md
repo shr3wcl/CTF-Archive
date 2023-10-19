@@ -167,4 +167,4 @@ Veuillez entrer le mot de passe : 123456789
 Bien joue, vous pouvez valider l'epreuve avec le pass : 123456789!
 ```
 
-Flag: ___123456789__
+Flag: __123456789__

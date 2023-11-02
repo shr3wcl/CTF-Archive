@@ -1,0 +1,20 @@
+Syrups
+176
+Find the secret digit
+Bob: Hey Alice, did you know that the result of deviding a by b might be a terminating decimal number or a recurring one?
+
+Alice: What kind of number is that? 🤔
+
+Bob: Well, the terminating decimal numbers have a finite number of digits just after the decimal point. For Example: 98.678, 12.1199. The recurring decimal numbers are those numbers that have an infinite number of digits after the decimal point. However, these digits are repeated at regular intervals. For Example: 4.787878..., 3.3333... One fun fact is that terminating decimal numbers can become recurring decimal numbers by adding an infinite number of zeros to them.
+
+Alice: Fascinating! An idea have just come out of my mind. Can you pinpoint the precise digit in the fraction a/b at position k after the decimal point? Supplying a,b and k is always smaller than 10^18. If you can solve my challenge, I'm gonna be your onlyfan. JK😍
+
+For Example:
+
+a=100, b=8 and k=1 then the result is 5.
+
+a=17, b=3 and k=10 then the result is 6
+
+prog.png prog2.png
+
+Bob: That's difficult. Can you guys, my beloved CTF players please help me to solve this problem? Connect to Alice with this command: nc 103.90.227.35 1337

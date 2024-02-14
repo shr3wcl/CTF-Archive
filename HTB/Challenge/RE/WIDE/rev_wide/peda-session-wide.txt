@@ -1,0 +1,5 @@
+break menu
+break *0x0000555555400daf
+break *0x0000555555400a6e
+break *0x0000555555400d03
+

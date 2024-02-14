@@ -1,0 +1,33 @@
+info func
+clear
+run
+run fqwfqw
+info func
+disas decrypt
+disas verifyPasswordLength
+info func
+disas verifyPasswordLength
+clear
+b main
+run aaaaaaaaaaaaa
+n
+disas verifyPasswordLength
+b main
+run
+b main
+run aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+n
+disas verifyPasswordPart1
+n
+n
+run aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+n
+disas verifyPasswordLength
+n
+disas verifyPasswordPart1
+b main
+run HTB{TH3_S3CR3TS_4R3_R3aaaaaaaaaaaaaaaaaaaaaaa
+n
+disas verifyPasswordPart2
+clear
+ls

@@ -1,0 +1,15 @@
+# 
+
+## 
+
+- Ở challenge này, tác giả đưa cho chúng ta 3 file khác nhau. Đọc mô tả thử thách trong file readme.txt thì tác giả bảo là chúng ta phải Decrypt file exe.
+- Khi chạy file run.exe thì có một chuỗi ký tự lạ và chương trình yêu cầu chúng ta phải nhập Key. Khi tôi nhập một key bất kỳ vào thì chương trình lại trả về một chuỗi ký tự lạ khác. Tôi chạy lại chương trình và cũng nhập lại key vừa nãy thì kết quả như nhau.
+- Vậy có lẻ nhiệm vụ của bài này là dịch ngược và tìm được key để giải mã tệp File được tác giả cung cấp.
+
+## 
+
+- Tôi sử dụng IDA để phân tích chương trình run.exe
+- Lúc này tôi thấy chỉ có một hàm start trong danh sách các Functions. Đồng thời IDA cũng chỉ phân tích được một phần chương trình và báo và không thể phân tích ở các đoạn phía sau. Lúc này tôi đoán chương trình có lẽ đã bị pack.
+- Tôi sử dụng tool DIE (Detect It Easy) để phân tích exe này. Đúng như tôi nghĩ, chương trình đã bị pack bởi UPX(3.0)
+- Tôi sử dụng tool UPX để unpack nó sau đó mở nó lên lại trong IDA.
+- Lúc này IDA có thể đọc được chương trình này. Tuy nhiên vẫn có một thông báo mà tôi chú ý của IDA là "Sorry, this node is too big to display" ngay ở chế độ Graph. Vì vậy tôi chuyển sang chế độ Text View thì thấy có rất nhiều câu lệnh trùng lặp. Vì không có gì bất thường nên tôi bỏ qua nó.

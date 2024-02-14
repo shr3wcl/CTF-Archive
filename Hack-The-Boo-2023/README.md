@@ -1,1 +1,0 @@
-# Giải này chỉ tham gia được vòng Practice, vòng Competitive thì bị trùng với ASCIS 2023 mất tiu rồi :<

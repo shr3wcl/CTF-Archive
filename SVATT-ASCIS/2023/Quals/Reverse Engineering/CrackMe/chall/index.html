@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CrackMe</title>
+  </head>
+  <body>
+    <h1>CrackMe</h1>
+
+    <input id="input">
+    <button id="submit" onclick="check_key()">Check</button>
+    <p id="message"></p>
+    <script>
+
+    function check_key() {
+      let input = document.getElementById("input").value.match(/^ASCIS\{([A-Za-z0-9-_? ]{23})\}/);
+      if (input == null || input.length !=2) {
+          document.getElementById("message").innerHTML = "Invalid input";
+          return 0;
+      }
+      let key = input[1];
+      WebAssembly.instantiateStreaming(fetch("main.wasm")).then(
+          (results) => {
+              let a = 3;
+              let b = -305508798;
+              let mem = results.instance.exports.memory;
+              let buffer = new Uint8Array(mem.buffer, 0, 0x10000);
+              for (let i = 0; i < key.length; i++) {
+                buffer[0x500+i] = key[i].charCodeAt(0)
+              }
+              while (b!= 12558187) {
+                
+                let r = results.instance.exports.func(a, b);
+                let t = new Uint8Array(mem.buffer, 0xA400, r);    
+                let m = new WebAssembly.Module(t);
+                let x = 0
+                let instance = new WebAssembly.Instance(m, {env: {memory:mem}})
+                x = instance.exports.step()
+                a = x[1]
+                b = x[0]
+              }
+              let bufffer = new Int32Array(mem.buffer, 0, 0x200)
+              if (bufffer[0x120] == -1) {
+                  document.getElementById("message").innerHTML = "Wrong key";
+              } else {
+                  document.getElementById("message").innerHTML = "Correct key";
+              }
+          },
+        );}</script>
+  </body>
+</html>

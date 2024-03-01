@@ -1,0 +1,1 @@
+1. Install this application in an API Level 29 or earlier (i.e. Android 10.0 (Google APIs)).

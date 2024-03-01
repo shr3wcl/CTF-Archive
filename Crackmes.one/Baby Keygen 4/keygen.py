@@ -7,11 +7,13 @@ def keygen():
             key += 'X'
         else:
             key += chr(random.randint(33, 127))
-            
-    return key
     
-print("[+] Key 1: " + keygen())
-print("[+] Key 2: " + keygen())
-print("[+] Key 3: " + keygen())
+    print("[!] Length: " + str(len(key)))
+    print("[!] Element at index 0: " + key[0])
+    print("[!] Element at index 3: " + key[3])
+    print("[!] Element at index 7: " + key[7])
+    print("[+] Key: " + key)
+    
+keygen()
 
-# Password: nanyJeygen
+# Password: nanyKeygen
